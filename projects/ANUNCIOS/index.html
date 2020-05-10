@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: 'poppins', sans-serif;
+        }
+
+        main {
+            width: 85%;
+            height: 100vh;
+            background-image: url(inicio.jpg);
+            background-size: auto;
+        }
+
+        main h2 {
+            text-align: center;
+            margin-top: 6rem;
+            letter-spacing: 1rem;
+            color: #fff;
+        }
+
+        main video {
+            margin: 3.58rem 29rem;
+            width: 38.5rem;
+            border-radius: 5px;
+        }
+
+        aside {
+            box-sizing: border-box;
+            height: 90vh;
+            width: 15%;
+            background-image: url(anuncio2.jpg);
+            background-size:cover;
+            margin: 2rem;
+        }
+
+        aside button {
+            float: right;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            margin: 0.5rem;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>CANADA</h2>
+        <video src="promo.mp4" autoplay loop muted poster="vista-preliminar.jpg"></video>
+    </main>
+
+    <aside class="anuncio">
+        <button class="ocultar">X</button>
+    </aside>
+
+    <script>
+        $(".ocultar").click(function(){
+        //Le pasamos el parámetro "slow" para que se oculte lentamente
+        $(".anuncio").fadeOut("slow");
+    });
+    </script>
+</body>
+</html>

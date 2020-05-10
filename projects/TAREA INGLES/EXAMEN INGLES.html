@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #E5E7E9;
+            padding: 0 5rem;
+            text-align: center;
+            font-family: 'poppins',sans-serif;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: green;
+        }
+
+        .tarea{
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .usuario {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .usuario h3 {
+            color: rgb(0, 132, 255);;
+        }
+
+        .usuario img {
+            height: 3rem;
+        }
+
+        .actividad {
+            background: #fff;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        .actividad textarea {
+            padding: 1rem;
+            border: none;
+        }
+
+        .actividad button {
+            float: right;
+            margin-top: 2rem;
+            font-family: 'poppins',sans-serif;
+            background: rgb(0, 81, 255);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h2>Task 1</h2>
+
+    <div class="tarea">
+        <div class="usuario">
+            <h3>Marlon Muñoz Urbina</h3>
+            <img src="usuario.png" alt="Usuario">
+        </div>
+
+        <h3>Translate the text into Spanish</h3>
+        <p>I had a great weekend. On Friday afternoon, I finished work at 5 PM. I went home and took a shower. Then I went to see a couple of my friends at a bar downtown. 
+
+            We had a couple of beers and a nice talk. 
+            
+            Tom told us about his new job, and Jim told us about his new girlfriend. After a while, we went to a restaurant and had pizza. I went to bed late that night, but I was very happy.</p>
+    </div>
+
+    <div class="actividad">
+        <textarea name="comments" id="comments" cols="80" rows="8" class="form-control"></textarea>
+        <button>Enviar</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        $(".actividad").mousedown(function(e){
+            //1: izquierda, 2: medio/ruleta, 3: derecho
+                if(e.which == 3) 
+                    {
+                    alert('No puedes copiar y pegar no sera valida la actividad');
+                    }
+            });
+    });
+    </script>
+</body>
+</html>

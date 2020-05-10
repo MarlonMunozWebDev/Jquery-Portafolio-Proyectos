@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 6rem;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            display: flex;
+            background: orange;
+            color: #fff;
+        }
+
+        main img{
+            width: 40%;
+            height: 23rem;
+            margin-top: 3.5rem;
+            margin-left: 1.5rem;
+            border-top-right-radius: 5rem;
+            border-bottom-left-radius: 5rem;
+        }
+
+        .especificacion {
+            width: 60%;
+            padding: 1rem 3rem;
+        }
+
+        .prenda {
+            letter-spacing: 0.5rem;
+            border-bottom: 2px solid #fff;
+        }
+
+        .especificacion button {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1.5rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .detalles {
+            margin: 1rem;
+        }
+
+        .detalles select{
+            font-family: 'poppins', sans-serif;
+        }
+
+        .resumen {
+            padding-left: 2.5rem;
+        }
+
+        .resumen input {
+            background: none;
+            border: none;
+            font-family: 'poppins', sans-serif;
+            font-weight: 700;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <img src="prenda.jpg" alt="">
+        <div class="especificacion">
+            <h2 class="prenda">PLAYERA POLO</h2>
+            <h3>Expecificaciones</h3>
+            <div class="detalles">
+                <label for="">Sexo</label>
+                <form name="ejemplo1" action="17-jquery-change-demo1.php" method="POST">
+                <select name="color1">
+                    <option value="0">Selecciona una opción</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </form>
+            
+            <label for="">Color</label>
+            <form name="ejemplo2" action="17-jquery-change-demo1.php" method="POST">
+                <select name="color2" id="ejemplo2">
+                    <option value="0">Selecciona una opción</option>
+                    <option value="Ginda">Ginda</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Azul">Azul</option>
+                </select>
+            </form>
+            
+            <label for="">Talla</label>
+            <form name="ejemplo3" action="17-jquery-change-demo1.php" method="POST">
+                <select name="color3" class="ejemplo3">
+                    <option value="0">Selecciona una opción</option>
+                    <option value="CH">Chica</option>
+                    <option value="M">Mediana</option>
+                    <option value="G">Grande</option>
+                </select>
+            </form>
+            </div>
+
+            <div class="resumen">
+                <h3>Resumen</h3>
+                <input type="text" name="valor1" size="40">
+    
+                <input type="text" name="valor2" size="40" id="valor2">
+    
+                <input type="text" name="valor3" size="40" class="valor3">
+            </div>
+            <button>Comprar</button>
+        </div>
+
+    </main>
+
+    <script>
+        $(document).ready(function () {
+                //SELECCIONAMOS EL SELECT Y CUANDO HALLA UN CAMBII EN EL ACTIVAR UNA FUNCION
+                $("select[name=color1]").change(function () {
+
+                    //LE PASAMOS EL VALOR A LA ETIQUETA INPUT
+                    $('input[name=valor1]').val($(this).val());
+                });
+                $("#ejemplo2").change(function () {
+
+                    $('#valor2').val($(this).val());
+                });
+                $(".ejemplo3").change(function () {
+
+                    $('.valor3').val($(this).val());
+                });
+            });
+    </script>
+</body>
+</html>

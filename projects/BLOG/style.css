@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 2rem 8rem;
+    font-family: 'poppins', sans-serif;
+}
+
+.buscar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buscar input {
+    height: 1.5rem;
+    background: #e5e7e9;
+    color: #fff;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+.buscar input::placeholder {
+    color: grey;
+}
+
+header img {
+    height: 2rem;
+}
+
+header .usuario {
+    transform: translateY(0.7rem);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: grey;
+}
+
+.contenido {
+    display: flex;
+}
+
+.publicacion {
+    display: flex;
+}
+
+.publicacion img {
+    height: 9rem;
+    max-height: 12rem;
+    width: 15rem;
+    max-width: 50rem;
+    object-fit: cover;
+    margin-top: 3.5rem;
+}
+
+.publicacion-info {
+    padding: 2rem;
+}
+
+.publicacion-info a {
+    text-decoration: none;
+    color: rgb(0, 162, 255);
+    font-weight: 700;
+}
+
+.autor, .fecha {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+aside {
+    background: #e5e7e9;
+    width: 35%;
+    height: 20rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+}
+
+aside h3 {
+    margin-left: 1rem;
+}
+
+
+aside a {
+    display: block;
+    padding: 1rem;
+    border-top: 2px solid #fff;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem 2rem;
+            background: #E5E7E9;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .contacto {
+            display: flex;
+            background: #FFF;
+            padding-left: 1rem;
+            height: 3rem;
+        }
+
+        .contacto div {
+            margin-right: 3rem;
+            transform: translateY(-2rem);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255, 0, 0, 0.589);
+            color: #fff;
+        }
+
+        nav img {
+            height: 2rem;
+            margin: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            padding: 1rem;
+        }
+
+        .sesion a {
+            margin-left: 1rem;
+            color: #000;
+        }
+
+        .activo {
+            border: 2px solid #fff;
+            background: #fff;
+            color: #000;
+        }
+
+        .bg-white {
+            background: #fff;
+        }
+
+        .font-white {
+            color: black;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="contacto">
+            <div>
+                <img src="" alt="">
+                <p>5532567890</p>
+            </div>
+    
+            <div>
+                <img src="" alt="">
+                <p>correo_electronico@outlook.com</p>
+            </div>
+    
+            <div>
+                <img src="" alt="">
+                <p>123Street - City</p>
+            </div>
+        </div>
+
+        <nav>
+            <img src="logo-nav.png" alt="Logo">
+            <a href="">Home</a>
+            <a href="">Nosotros</a>
+            <a href="">Servicios</a>
+            <a href="">Portafolio</a>
+            
+            <div class="sesion">
+                <a href="">Sign Up</a>
+                <a href="">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $('nav a').on({
+                click: function(){
+                    $(this).addClass('seleccionado');
+                }, mouseenter: function() {
+                    $(this).addClass('bg-white font-white');
+                }, mouseleave: function (){
+                    $(this).removeClass('bg-white font-white');
+                }
+            });
+
+            $('nav a').on('click', function(e){
+                $('nav a').removeClass('activo');
+                e.preventDefault();
+                $(this).addClass('activo');
+            })
+    </script>
+</body>
+</html>

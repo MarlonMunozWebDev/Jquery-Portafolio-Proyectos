@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="buscar">
+            <img src="img/logo.png" alt="Logo">
+            <div>
+                <input type="text" placeholder="Buscar">
+                <img src="img/usuario.png" alt="Usuario" class="usuario">
+            </div>
+        </div>
+
+        <nav>
+            <a href="">HOME</a>
+            <a href="">CATEGORIAS</a>
+            <a href="">NEWS</a>
+            <a href="">TENDENCIAS</a>
+            <a href="">BLOG</a>
+        </nav>
+    </header>
+    
+    <div class="contenido">
+        <main>
+            <div class="publicacion">
+                <img src="img/noticia1.jpg" alt="">
+                <div class="publicacion-info">
+                    <h2>The Sky Person's Guide to Winning Friends</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus nobis sed quod distinctio dolore. Sapiente est accusantium atque, aspernatur illo unde eius pariatur nesciunt et iusto. Libero, sint doloremque.</p>
+                    <p class="autor">German Martinez Lopez</p>
+                    <p class="fecha">08/07/19</p>
+                    <a href="">Leer mas</a>
+                </div>
+            </div>
+    
+            <div class="publicacion">
+                <img src="img/noticia2.jpg" alt="">
+                <div class="publicacion-info">
+                    <h2>The Sky Person's Guide to Winning Friends</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus nobis sed quod distinctio dolore. Sapiente est accusantium atque, aspernatur illo unde eius pariatur nesciunt et iusto. Libero, sint doloremque.</p>
+                    <p class="autor">Leo Alexander Williams</p>
+                    <p class="fecha">10/11/19</p>
+                    <a href="">Leer mas</a>
+                </div>
+            </div>
+    
+            <div class="publicacion">
+                <img src="img/noticia3.jpg" alt="">
+                <div class="publicacion-info">
+                    <h2>The Sky Person's Guide to Winning Friends</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae natus nobis sed quod distinctio dolore. Sapiente est accusantium atque, aspernatur illo unde eius pariatur nesciunt et iusto. Libero, sint doloremque.</p>
+                    <p class="autor">Olga Martinez Garcia</p>
+                    <p class="fecha">02/01/20</p>
+                    <a href="">Leer mas</a>
+                </div>
+            </div>
+        </main>
+    
+        <aside>
+                <h3>CATEGORIAS</h3>
+                <a>Vida</a>
+                <a>Amor</a>
+                <a>Naturaleza</a>
+                <a>Otros</a>
+        </aside>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+
+        $('.publicacion img').on('mouseenter', imagenPreview);
+        $('.publicacion img').on('mouseleave', disminuir);
+
+        function imagenPreview(){
+            $(this).animate({'width': '100%'}, 1000);
+        }
+
+        function disminuir(){
+            $(this).animate({'width': '15rem'}, 1000);
+        }
+        
+
+    </script>
+</body>
+</html>

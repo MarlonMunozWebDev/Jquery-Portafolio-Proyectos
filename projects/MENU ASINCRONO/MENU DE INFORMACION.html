@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+   <style>
+
+         body {
+             margin: 0;
+             padding: 0;
+             font-family: 'poppins',sans-serif;
+         }
+
+        main {
+            margin: auto;
+            margin-top: 10rem;
+            width: 35rem;
+        }
+        main nav {
+            background: #fff;
+            color: black
+            padding: 1rem;
+            margin: 0;
+        }
+
+        main nav a{
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 1rem;
+        }
+
+        main nav a:hover {
+            padding: 1rem;
+        }
+
+        .menu {
+            text-align: center;
+            position: relative;
+        }
+
+        .seccion {
+            background: orange;
+            color: #fff;
+            position: absolute;
+            display: none;
+            padding: 1rem;
+        }
+
+        .seccion img {
+            height: 4rem;
+        }
+
+        .activo {
+            background: orange;
+            padding: 1rem;
+        }
+
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="#seccion1">Enlace 1</a>
+            <a href="#seccion2">Enlace 2</a>
+            <a href="#seccion3">Enlace 3</a>
+        </nav>
+
+        <div class="menu">
+            <div id="seccion1" class="seccion">
+                <img src="logo.png" alt="">
+                <h2>AVISO LEGAL</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, repellendus! Dolorem eveniet reiciendis sed nobis laborum laudantium quam atque sunt temporibus cupiditate! Voluptatem eius temporibus dignissimos aliquid. Voluptatem, explicabo corporis!</p>
+            </div>
+
+            <div id="seccion2" class="seccion">
+                <img src="logo.png" alt="">
+                <h2>POLITICA DE PRIVACIDAD</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, repellendus! Dolorem eveniet reiciendis sed nobis laborum laudantium quam atque sunt temporibus cupiditate! Voluptatem eius temporibus dignissimos aliquid. Voluptatem, explicabo corporis!</p>
+            </div>
+
+            <div id="seccion3" class="seccion">
+                <img src="logo.png" alt="">
+                <h2>POLITICA COOKIES</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, repellendus! Dolorem eveniet reiciendis sed nobis laborum laudantium quam atque sunt temporibus cupiditate! Voluptatem eius temporibus dignissimos aliquid. Voluptatem, explicabo corporis!</p>
+            </div>
+        </div>
+    </main>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script>
+        //MOSTRAR EÑ PRIMER TEXTO
+        $('main .seccion:first').show();
+        $('main nav a:first').addClass('activo');
+
+        $('main nav a').on('click', mostrarInformacion);
+
+        function mostrarInformacion(){
+            //CUALQUIERA QUE TENGA LA CLASE REMOVERLA
+            $('main nav a').removeClass('activo');
+
+            //EL QUE HALLA SIDO SELECCIONADO AGREGARSELA
+            $(this).addClass('activo');
+
+            //GUARDAR EL ID NOMBRE DEL ENLACE SELECCIONADO
+            var enlace = $(this).attr('href');
+
+            //ESCONDEMOS TODOS LAS SECCIONES DE INFORMACION
+            //$('main .menu .seccion').hide();
+            $('main .menu .seccion').fadeOut();
+
+            //MOSTRA LA INFORMACION SEGUN EL NOMBRE DEL ENLACE SELECCIONADO
+            //$(enlace).show();
+            $(enlace).fadeIn();
+            
+            return false;
+        }
+
+    </script>
+</body>
+</html>

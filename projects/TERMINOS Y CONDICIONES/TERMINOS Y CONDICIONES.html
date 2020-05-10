@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        header {
+            font-weight: 700;
+            border-bottom: 2px solid grey;
+        }
+
+        header h2 {
+            margin-left: 1rem;
+        }
+
+        main {
+            display: flex;
+            padding: 2rem;
+            line-height: 1.5rem;
+        }
+
+        .informacion-pago {
+            width: 70%;
+        }
+
+        .datos-personales {
+            margin-top: -2rem;
+            border-bottom: 2px solid grey;
+        }
+
+        .metodo-envio {
+            border-bottom: 2px solid grey;
+        }
+
+        .resumen-pago {
+            width: 30%;
+            background: #EAECEE;
+            padding: 2rem;
+            margin-left: 2rem;
+        }
+
+        .editar-compra {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .pago {
+            border-bottom: 2px solid grey;
+        }
+
+        .condiciones button{
+            font-family: 'poppins', sans-serif;
+            width: 50%;
+            height: 2rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #000;
+            color: #FFF;
+        }
+
+        .producto {
+            display: flex;
+            border-bottom: 1px solid black;
+        }
+
+        .resumen-pago {
+            height: 50%;
+            line-height: 1rem;
+        }
+
+        .resumen-pago img {
+            object-fit: cover;
+            width: 4rem;
+            height: 3rem;
+        }
+
+        .resumen-pago a {
+            margin-top: 1rem;
+        }
+
+        .especificacion-producto {
+            margin-top: -1rem;
+            margin-left: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .precio {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h2>CARRITO DE COMPRAS</h2>
+    </header>
+    <main>
+    <div class="informacion Pago">
+        <div class="datos-personales">
+            <h3>Datos de Envio</h3>
+            <p>Carlos Muñoz</p>
+            <p>CarlosM@outlook.com</p>
+            <p>Manuel M. Ponce No.20</p>
+            <p>5523457845</p>
+        </div>
+    
+        <div class="metodo-envio">
+            <h3>Metodo de Envio</h3>
+            <p>Estafeta</p>
+        </div>
+    
+        <div class="pago">
+            <h3>Pago</h3>
+    
+            <p>Te llamaremops en las proximas 24 hpras para concretar el
+                pago, hasta entonces puedes decidir si prefieres una transaccion bancaria o un cheque
+                <br>
+                Te llamaremos pronto, que tengas un buen dia
+            </p>
+        </div>
+    
+        <div class="condiciones">
+            <h3>Revisar y realizar pedido</h3>
+            <p>Por favor revisa los detalles del pedido y cuando estes listo, ha click en Realizar Pedido.</p>
+            
+            <input type="checkbox" id="terminos" value="Mayor"> Estoy de acuerdo con la <a href="terminos.html">Terminos y Condiciones</a><br>
+            <button>Realizar Pedido</button>
+        </div>
+    </div>
+
+    <div class="resumen-pago">
+        <div class="editar-compra">
+            <h3>Resumen del pedido</h3> 
+            <a href="">Editar Carrito</a>
+        </div>
+
+        <div class="producto">
+            <img src="IPad.jpg" alt="">
+            <div class="especificacion-producto">
+                <p>Pantalla LED 42 Pulgadas</p>
+                <p>Cantidad: 1</p>
+                <a href="">+ Mas Detalles</a>
+            </div>
+        </div>
+
+
+        <div>
+            <div><p>Subtotal</p></div>
+            <div><p>Envio</p></div>
+            <div><p>IVA</p></div>
+
+            <div class="precio">
+                <p>Total</p>
+                <p>$35.00</p>
+            </div>
+        </div>
+    </div>
+    </main>
+    
+
+    <script>
+        //Código jquery para detectar cuándo se activa el checkbox
+    $("#terminos").change(function () {
+            //Si el checkbox está seleccionado
+            if ($(this).is(":checked")) {
+                alert("Aceptaste los Terminos y Condiciones");
+            }
+            else {
+                alert("Acepta los Terminos y Condiciones");
+            }
+        });
+    </script>
+</body>
+</html>

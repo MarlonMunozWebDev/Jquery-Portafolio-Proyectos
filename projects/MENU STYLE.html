@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        header{
+            box-sizing: border-box;
+            background: seagreen;
+            height: 4rem;
+            color: #fff;
+            display: flex;
+            justify-content:space-evenly;
+            margin: 2rem 4rem;
+            padding: 3rem 3rem;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            margin-right: 2rem;
+        }
+
+        nav a:last-child {
+            margin-right: 0;
+        }
+
+
+        header button {
+            font-family: 'poppins', sans-serif;
+            height: 2rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 1rem;
+            font-weight: 700;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        main button {
+            font-family: 'poppins', sans-serif;
+            height: 2rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 1rem;
+            font-weight: 700;
+        }
+
+        main div {
+            margin-top: 1rem;
+        }
+
+
+        main .colores div{
+            background-color: purple;
+            height: 2rem;
+            width: 2rem;
+        }
+
+        .morado {
+            background-color: purple;
+        }
+
+        .azul {
+            background-color: rgba(15, 15, 99, 0.842);
+        }
+
+        .negro {
+            background-color: #000;
+        }
+
+        .normal {
+            font-weight: normal;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .bolder {
+            font-weight: bolder;
+        }
+        
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="Logo">
+
+        <nav>
+            <a href="">Inicio</a>
+            <a href="">Servicios</a>
+            <a href="">Blog</a>
+            <a href="">Contacto</a>
+        </nav>
+
+        <button>Ingresar</button>
+    </header>
+
+    <main>
+        <div class="colores">
+            <button class="color1">Purple</button>
+            <button class="color2">Blue</button>
+            <button class="color3">Black</button>
+        </div>
+
+        <div class="grosor">
+            <button class="grosor1">Normal</button>
+            <button class="grosor2">Bold</button>
+            <button class="grosor3">More Bold</button>
+        </div>
+
+        <div class="alineacion">
+            <button class="alineacion1">space-around</button>
+            <button class="alineacion2">space-between</button>
+            <button class="alineacion3">flex-end</button>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready( function (){
+            //COLORES
+            $('.color1').click( function (){
+                $('header').addClass("morado");
+            });
+
+            $('.color2').click( function (){
+                $('header').addClass("azul");
+            });
+
+            $('.color3').click( function (){
+                $('header').addClass("negro");
+            });
+
+
+            //GROSOR DE LETRA
+            $('.grosor1').click( function (){
+                $('header nav a').addClass("normal");
+            });
+
+            $('.grosor2').click( function (){
+                $('header nav a').addClass("bold");
+            });
+
+            $('.grosor3').click( function (){
+                $('header nav a').addClass("bolder");
+            });
+
+
+            //ALINEACION
+            $('.alineacion1').click( function (){
+                $('header').addClass("space-around");
+            });
+
+            $('.alineacion2').click( function (){
+                $('header').addClass("space-between");
+            });
+
+            $('.alineacion3').click( function (){
+                $('header').addClass("flex-end");
+            });
+        })
+    </script>
+</body>
+</html>

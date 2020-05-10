@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        body {
+            background: #E5E7E9;
+            padding: 1rem;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body h2 {
+            margin-left: 3rem;
+            margin-bottom: -0.5rem;
+            font-size: 3rem;
+        }
+
+        input {
+            font-family: 'poppins', sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            height: 1.5rem;
+        }
+
+        button {
+            background: orange;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+
+        .importantes, .citas, .otros {
+            background: #fff;
+            padding: 0.5rem 1rem;
+            margin: 3rem;
+            border-radius: 1rem;
+        }
+
+        .titulo {
+            font-family: 'poppins', sans-serif;
+            width: 3.2rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #fff;
+            background: green;
+            transform: translateY(-2rem);
+        }   
+
+        .titulo-citas {
+            background: rgb(0, 110, 255);
+        }
+
+        .titulo-otros {
+            background: fuchsia;
+        }
+
+
+        .actualizar {
+            float: right;
+            font-family: 'poppins', sans-serif;
+            background: black;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>My day</h2>
+
+    <div class="importantes">
+        <div class="titulo titulo-importantes">Todo</div>
+        <div>
+            <input type="text" id="todo">
+            <button class="boton-todo">Agregar</button>
+        </div>
+
+    </div>
+
+    <div class="citas">
+        <div class="titulo titulo-citas">Tareas</div>
+        <div>
+            <input type="text" id="citas">
+            <button class="boton-citas">Agregar</button>
+        </div>
+
+    </div>
+
+    <div class="otros">
+        <div class="titulo titulo-otros">Otros</div>
+        <div>
+            <input type="text" id="otros">
+            <button class="boton-otros">Agregar</button>
+        </div>
+        
+    </div>
+
+    <button class="actualizar">Vaciar Todo</button>
+    <script>
+        $(document).ready( function(){
+            $(".boton-todo").click( function (){
+                var todoNuevo = $("#todo").val();
+                $(".importantes").append("<br> <input type='radio'>"+ todoNuevo);
+            });
+
+            $(".boton-citas").click( function (){
+                var citasNuevo = $("#citas").val();
+                $(".citas").append("<br> <input type='radio'>"+ citasNuevo);
+
+            });
+
+            $(".boton-otros").click( function (){
+                var otrosNuevo = $("#otros").val();
+                $(".otros").append("<br> <input type='radio'>"+ otrosNuevo);
+            });
+
+            $(".actualizar").click(function () {
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>
